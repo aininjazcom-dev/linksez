@@ -167,7 +167,7 @@ function saveLink(form) {
   const url = httpUrl(data.get('url'));
   if (!url) { toast('Use a valid http or https URL'); return; }
   const existing = state.links.find(link => link.url === url);
-  if (existing) { go(`detail/${existing.id}`); toast('Already in your library'); return; }
+  if (existing) { shareDraft = null; previewData = null; sessionStorage.removeItem(SHARE_KEY); go(`detail/${existing.id}`); toast('Already in your library'); return; }
   const domain = host(url);
   const title = String(data.get('title')).trim() || previewData?.title || domain;
   const type = String(data.get('type'));
