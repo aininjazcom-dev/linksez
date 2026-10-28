@@ -120,3 +120,18 @@
   .settings-list{grid-column:2;grid-row:2/span 2}
   .profile-quote{grid-column:1/-1;justify-self:center}
 }
+.remote-photo{position:relative;overflow:hidden}
+.remote-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rich-preview{display:block;overflow:hidden;padding:0;margin-bottom:8px}
+.rich-preview .preview-cover .photo{width:100%;height:170px;border-radius:0}
+.rich-preview .preview-cover .photo svg{width:36px;height:36px}
+.rich-preview .preview-cover .photo span{display:block}
+.preview-copy{padding:15px 17px 16px}
+.preview-copy span{display:block;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+.preview-copy strong{display:block;margin:5px 0;font-family:Manrope,Arial,sans-serif;font-size:17px;line-height:1.3;white-space:normal}
+.preview-copy p{margin:0 0 8px;color:var(--muted);font-size:12px;line-height:1.45}
+.preview-copy small{color:var(--muted);font-size:11px}
+.preview-status{margin:0 0 20px;color:var(--muted);font-size:11px;line-height:1.4}
+.detail-actions{flex-wrap:wrap}
+.modal{max-height:calc(100dvh - 32px);overflow:auto}
+@media(min-width:600px){.rich-preview .preview-cover .photo{height:220px}}

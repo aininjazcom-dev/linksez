@@ -1,5 +1,5 @@
-const CACHE = 'linsez-v2';
-const CORE = ['/', '/index.html', '/src/app.js', '/src/styles.css', '/manifest.webmanifest', '/icons/icon.svg', '/icons/icon-192.png', '/icons/icon-512.png', '/images/editorial-grid.png'];
+const CACHE = 'linsez-v3';
+const CORE = ['/', '/index.html', '/src/app.js', '/src/link-utils.js', '/src/styles.css', '/manifest.webmanifest', '/icons/icon.svg', '/icons/icon-192.png', '/icons/icon-512.png', '/images/editorial-grid.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
 });
